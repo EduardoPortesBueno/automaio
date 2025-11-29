@@ -4,13 +4,8 @@
     "es2021": true,
     "node": true
   },
-  "plugins": [
-    "html"
-  ],
-  "extends": [
-    "eslint:recommended",
-    "prettier"
-  ],
+  "plugins": ["html"],
+  "extends": ["eslint:recommended", "prettier"],
   "globals": {
     "$": "readonly"
   },

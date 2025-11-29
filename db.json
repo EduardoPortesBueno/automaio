@@ -4,10 +4,7 @@
       "company": "1",
       "name": "215361536",
       "description": "jyigiy",
-      "systems": [
-        "System A",
-        "System H"
-      ],
+      "systems": ["System A", "System H"],
       "id": 1
     }
   ]

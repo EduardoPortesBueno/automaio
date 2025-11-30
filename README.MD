@@ -1,100 +1,104 @@
-# Automa.io (Projeto da Disciplina)
+# 🤖 Automa.io (Projeto da Disciplina)
 
-- **Autor:** Eduardo Portes Bueno
+![Bootstrap](https://img.shields.io/badge/Bootstrap-5.3.3-purple?style=flat&logo=bootstrap)
+![Sass](https://img.shields.io/badge/Sass-SCSS-pink?style=flat&logo=sass)
+![JavaScript](https://img.shields.io/badge/JavaScript-ES6+-yellow?style=flat&logo=javascript)
+![jQuery](https://img.shields.io/badge/jQuery-3.7.1-blue?style=flat&logo=jquery)
+![JSON Server](https://img.shields.io/badge/Fake_API-JSON_Server-gray?style=flat)
+
+> **Autor:** Eduardo Portes Bueno
 
 ## 1. Descrição do Projeto
 
-Este projeto é uma aplicação web responsiva (mobile-first) para a disciplina de Frameworks CSS. O tema é "Automa.io", uma plataforma de automação onde usuários podem se cadastrar, logar, solicitar novas automações (preenchendo um formulário) e visualizar as automações já cadastradas em um dashboard.
+O **Automa.io** é uma aplicação web responsiva (Mobile-First) desenvolvida como projeto final da disciplina de **Frameworks CSS**. A plataforma simula um sistema SaaS de automação onde usuários podem consultar planos, participar de uma comunidade, criar conta, e gerenciar solicitações de automação em um dashboard exclusivo.
 
-A aplicação foi construída com **Bootstrap 5**, **Sass (SCSS)**, e **JavaScript** (para interatividade), e utiliza um **JSON Server** como back-end "fake" para persistência de dados.
+A aplicação foi construída focando na arquitetura de estilos com **Bootstrap 5** e **Sass**, garantindo um código modular, além de lógica avançada em JavaScript (ES6 Modules) consumindo APIs reais e simuladas.
 
 ## 2. Links do Projeto
 
-- **Prototipação no Figma (ID 01):** [https://www.figma.com/design/uryimLbfDaLZd2i0w1Ukfu/SIEC-AUTOMAIO](https://www.figma.com/design/uryimLbfDaLZd2i0w1Ukfu/SIEC-AUTOMAIO)
-- **Site em Produção (GitHub Pages):** [https://eduardoportesbueno.github.io/automaio/](https://eduardoportesbueno.github.io/automaio/)
-- **Repositório GitHub:** [https://github.com/EduardoPortesBueno/automaio](https://github.com/EduardoPortesBueno/automaio)
+* 🎨 **Prototipação (Figma):** [Acessar Projeto no Figma](https://www.figma.com/design/uryimLbfDaLZd2i0w1Ukfu/SIEC-AUTOMAIO)
+* 🌐 **Deploy (GitHub Pages):** [Acessar Site em Produção](https://eduardoportesbueno.github.io/automaio/)
+* 📂 **Repositório:** [github.com/EduardoPortesBueno/automaio](https://github.com/EduardoPortesBueno/automaio)
 
-## 3. Tecnologias Utilizadas
+## 3. Instruções de Execução Local
 
-- **Framework CSS:** Bootstrap 5.3.3
-- **Pré-processador:** Sass (SCSS)
-- **Back-end (Fake):** JSON Server
-- **Bibliotecas JavaScript:**
-  - jQuery (para manipulação do DOM e plugins)
-  - jQuery Mask Plugin (para máscaras de formulário)
-- **Ferramentas de Desenvolvimento:**
-  - Node.js e NPM (Gerenciamento de pacotes)
-  - ESLint (Linter de código)
-  - Prettier (Formatador de código)
-
-## 4. Instruções de Execução Local
-
-Este projeto requer dois terminais rodando simultaneamente (um para a API e outro para o Sass).
+Este projeto utiliza o **JSON Server** para simular um back-end e o **Sass** para compilação de estilos.
 
 1.  **Clone o repositório:**
     ```bash
     git clone [https://github.com/EduardoPortesBueno/automaio.git](https://github.com/EduardoPortesBueno/automaio.git)
     cd automaio
     ```
+
 2.  **Instale as dependências:**
     ```bash
     npm install
     ```
-3.  **Terminal 1: Rode a API (JSON Server):**
 
-    ```bash
-    npm run server
-    ```
+3.  **Inicie os serviços (Necessário 2 terminais):**
 
-    _(O servidor estará rodando em `http://localhost:3000`)_
+    * **Terminal 1 (API Fake):** Inicia o servidor de dados em `localhost:3000`.
+        ```bash
+        npm run server
+        ```
+    * **Terminal 2 (Sass Watch):** Compila o SCSS para CSS em tempo real.
+        ```bash
+        npm run watch
+        ```
 
-4.  **Terminal 2: Rode o Sass (Watch Mode):**
+4.  **Acesse o projeto:**
+    Abra o arquivo `index.html` (ou qualquer outro html) no seu navegador, preferencialmente usando o **Live Server**.
 
-    ```bash
-    npm run watch
-    ```
+## 4. Tecnologias e Ferramentas
 
-    _(Isso irá compilar `scss/main.scss` para `css/style.css`)_
+* **Front-end:** HTML5, CSS3, JavaScript (ES6 Modules).
+* **Framework CSS:** Bootstrap 5.3.3 (Grid, Components, Utilities).
+* **Pré-processador:** Sass (SCSS) para customização de variáveis e temas.
+* **Libs JS:** jQuery 3.7 e jQuery Mask Plugin (apenas na página de Registro).
+* **Back-end Simulado:** JSON Server (REST API).
 
-5.  **Abra o projeto:**
-    - Abra os arquivos `.html` (como `index.html`) no seu navegador (ex: usando a extensão Live Server do VS Code).
+---
 
-## 6. Checklist de Funcionalidades (IDs da Avaliação)
+## 5. Checklist de Funcionalidades (Mapeamento da Avaliação)
+
+Abaixo, como cada requisito do edital foi atendido no código:
 
 ### RA1 - Frameworks CSS
-
-- [x] **ID 02 (Layout com Framework):** Layouts responsivos criados com o Grid (`row`, `col-`) e utilitários Flexbox (`d-flex`) do Bootstrap.
-- [x] **ID 03 (Layout com CSS Puro):** Classes customizadas (`.icon-bg`, `.confirmation-overlay`) usam Flexbox e Position para alinhamento.
-- [x] **ID 04 (Componentes Prontos):** Utiliza `navbar`, `card`, `btn`, `form-select`, `input-group`, `carousel`, `collapse` (chat) e `dropdown` (logout).
-- [x] **ID 05 (Unidades Relativas):** O framework Bootstrap 5 usa `rem` por padrão. `vh` foi usado no chat e `rem` nas classes customizadas.
-- [x] **ID 06 (Design System):** O Design System é aplicado via Sass, sobrescrevendo a variável `$primary` para a cor laranja.
-- [x] **ID 07 (Sass):** O projeto usa `scss/main.scss` e `scss/custom/_variables.scss` para importar o Bootstrap e sobrescrever suas variáveis.
-- [x] **ID 08 (Tipografia Responsiva):** A tipografia fluida do Bootstrap foi ativada via Sass (`$enable-responsive-font-sizes: true`).
-- [x] **ID 09 (Responsividade de Imagens):** Imagens (gráficos, testemunhos) usam as classes `.img-fluid` e `.rounded-circle`.
-- [x] **ID 10 (Otimização de Imagens):** Imagens otimizadas (ex: via TinyPNG) para performance.
+- [x] **ID 01 (Prototipação):** Interface fiel ao Figma.
+- [x] **ID 02 (Layout Framework):** Uso de `row`, `col-` e `d-flex` em todas as páginas (ex: Grid de cards em `templates.html` e `pricing.html`).
+- [x] **ID 03 (Layout CSS Puro):** Classes customizadas como `.icon-bg` e `.confirmation-overlay`.
+- [x] **ID 04 (Componentes):**
+    - `Navbar` e `Footer` (todas as páginas).
+    - `Carousel` (em `automations.html`).
+    - `Collapse` (Widget de Chat em todas as páginas).
+    - `Cards` (Pricing, Templates, Dashboard).
+- [x] **ID 05 (Unidades Relativas):** Uso de `rem` para fontes/margens e `%` para larguras.
+- [x] **ID 06 (Design System):** Identidade visual (Cores Primary/Secondary) unificada via CSS Variables.
+- [x] **ID 07 (Sass):** Arquivos SCSS modulares para sobrescrever o Bootstrap.
+- [x] **ID 08 (Tipografia):** Fontes responsivas ativadas.
+- [x] **ID 09 (Imagens):** Uso de `.img-fluid` e `.rounded` (ex: gráficos no Dashboard).
+- [x] **ID 10 (Otimização):** Imagens comprimidas (TinyPNG) para performance.
 
 ### RA2 - Formulários
-
-- [x] **ID 11 (Validação HTML Nativa):** Os formulários de Login, Registro e Nova Automação usam `required` e os scripts de validação (`.needs-validation`) do Bootstrap.
-- [x] **ID 12 (REGEX):** O campo de Telefone (`register.html`) usa um `pattern` HTML com REGEX para validar o formato.
-- [x] **ID 13 (Elementos de Seleção):** Utiliza `<select>`, `<textarea>` e botões-toggle (que atuam como checkboxes).
-- [x] **ID 14 (Web Storage):** O `localStorage` é usado para persistir o estado de login do usuário (criar o login, logout e guardiões).
+- [x] **ID 11 (Validação HTML):** Formulários (`login.html`, `register.html`) usam `.needs-validation` e feedback visual do Bootstrap.
+- [x] **ID 12 (REGEX):** Campo de telefone em `register.html` usa `pattern="\(\d{2}\) \d{5}-\d{4}"`.
+- [x] **ID 13 (Inputs Diversos):**
+    - `Select` e `Textarea` em `new-automation.html`.
+    - Botões atuando como Checkbox (Toggle) para seleção de sistemas.
+- [x] **ID 14 (Web Storage):** `AuthService` utiliza `localStorage` para manter o usuário logado entre as páginas.
 
 ### RA3 - Ferramentas
-
-- [x] **ID 15 (Node.js e NPM):** `package.json` é usado para gerenciar todas as dependências (Bootstrap, Sass, JSON Server, ESLint).
-- [x] **ID 16 (Git/GitHub):** O projeto foi versionado no Git, usa `.gitignore`, e está hospedado no GitHub Pages.
-- [x] **ID 17 (README.md):** Este `README.md` segue o padrão da disciplina.
-- [x] **ID 18 (Organização de Arquivos):** O projeto segue a estrutura modular (`/scss`, `/css`, `/img`, `db.json`).
-- [x] **ID 19 (Linters e Formatadores):** O projeto está configurado com ESLint (`.eslintrc.json`) e Prettier (`.prettierrc.json`).
+- [x] **ID 15 (NPM):** Dependências listadas no `package.json`.
+- [x] **ID 16 (Git):** Versionamento completo.
+- [x] **ID 17 (Documentação):** Este README.
+- [x] **ID 18 (Organização):** Separação clara de `/css`, `/img`, `/js/services`.
+- [x] **ID 19 (Linters):** ESLint configurado.
 
 ### RA4 - Bibliotecas JavaScript
+- [x] **ID 20 (jQuery Core):** Utilizado em `register.html` para inicialização de plugins.
+- [x] **ID 21 (jQuery Plugins):** **jQuery Mask Plugin** aplicado nos campos de Telefone e CEP em `register.html`.
 
-- [x] **ID 20 (jQuery):** Utilizado no `register.html` para selecionar elementos (`$('#phone')`) e no `$(document).ready()`.
-- [x] **ID 21 (Plugin jQuery):** O **jQuery Mask Plugin** é usado no campo de Telefone (`register.html`).
-
-### RA5 - APIs
-
-- [x] **ID 22 (API fake - POST):** O formulário `new-automation.html` usa `fetch` para enviar (POST) os dados para o `json-server`.
-- [x] **ID 23 (API fake - GET):** A página `automations.html` usa `fetch` para buscar (GET) os dados do `json-server` e renderizar os slides dinamicamente.
-- [x] **ID 24 (API pública real):** O formulário `register.html` usa `fetch` para buscar (GET) dados da API **ViaCEP** e preencher o endereço.
+### RA5 - APIs e Assincronismo
+- [x] **ID 22 (API Fake - POST):** `new-automation.html` envia dados para o JSON Server via `fetch`.
+- [x] **ID 23 (API Fake - GET):** `automations.html` consome o JSON Server para montar os slides do carrossel dinamicamente.
+- [x] **ID 24 (API Pública):** `register.html` consome a API **ViaCEP** para preenchimento automático de endereço, com tratamento de erros (`try/catch`).
